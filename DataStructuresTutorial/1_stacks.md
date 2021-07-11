@@ -47,4 +47,4 @@ Text Editor Undo Property
 
 ## Problem to Solve
 Analyzing a Hamburger
-* *
+
