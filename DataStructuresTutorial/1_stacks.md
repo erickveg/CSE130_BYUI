@@ -1,6 +1,7 @@
 # STACKS
 
 ## Table of Contents
+
 * [Introduction](#introduction)
 * [Stacks in Python](#stacks-in-python)
 * [Performance](#performance)
@@ -39,10 +40,11 @@ stack.append('mangos')
 ERROR
 ```
 ## Performance
-As you can notice, because we add or removed a stack component only from one end of the structure the 
+As you can notice, because we add or removed a stack component only from one end of the structure the performance of those operation will always be O(1).
 
 ## Example
-
+Text Editor Undo Property
 
 ## Problem to Solve
-
+Analyzing a Hamburger
+* *
