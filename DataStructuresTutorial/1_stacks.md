@@ -49,7 +49,7 @@ Have you ever been writing an important document and suddenly you press a key an
 
 ```python
 # Create a stack to store the text inserted by the user
-words = []
+text = []
 # Create a stack to store the words deleted
 memory = []
 
@@ -68,11 +68,11 @@ while quit == False:
     if user_input == 1:
         user_text = input("Insert text here: ")
         for word in user_text.split():
-            words.append(word)
+            text.append(word)
     
     if user_input == 2:
-        if len(words) > 0: # Make sure your words stack is not empty
-            removed_word = words.pop()
+        if len(text) > 0: # Make sure your text stack is not empty
+            removed_word = text.pop()
             memory.append(removed_word)
             print(f"You have removed the word {removed_word}")
         else:
@@ -81,7 +81,7 @@ while quit == False:
     if user_input == 3:
         if len(memory) > 0 # Make sure your memory stack is not empty
             
-            restore_word = words.append(memory.pop())
+            restore_word = text.append(memory.pop())
             print(f"Word: {restore_word} added again")
         else:
             print("No words in 'memory'")
@@ -92,7 +92,7 @@ while quit == False:
 
     print(f"""\n 
     ==================
-    {' '.join(words)}
+    {' '.join(text)}
     ==================
     """)
 ```
@@ -105,11 +105,57 @@ Choose an option:
     (4) Quit 
     
 >>> 1
+
+Insert text here: My name is Erick
+
+==================
+My name is Erick
+==================
+
+Choose an option:
+    (1) Insert text
+    (2) Delete last word
+    (3) Undo deletion
+    (4) Quit 
+
+>>> 2 
+You have removed the word 'Erick'
+
+==================
+My name is
+==================
+
+Choose an option:
+    (1) Insert text
+    (2) Delete last word
+    (3) Undo deletion
+    (4) Quit 
+
+>>> 3
+
+Word: 'Erick' added again
+
+==================
+My name is Erick
+==================
+
+... # Menu removed for simplicity
+
+>>> 3    # 'is' removed
+>>> 3    # 'name' removed
+>>> 3    # 'My' removed
+>>> 3
+No words in memory
+
+>>> 2    # 'My' added to text
+==================
+My 
+==================
 ```
 
 
 ## Problem to Solve
-Analyzing a Hamburger
+
 
 [Back to Welcome Page](0_Welcome.md)
 
