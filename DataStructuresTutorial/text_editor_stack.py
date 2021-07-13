@@ -22,13 +22,14 @@ while quit == False:
         if len(words) > 0: # Make sure your stack is not empty
             removed_word = words.pop()
             memory.append(removed_word)
-            print(f"You have removed the word {removed_word}")
+            print(f"You have removed the word '{removed_word}'")
         else:
             print("Sorry, you need to insert text first")
     
     if user_input == 3:
-        restore_word = words.append(memory.pop())
-        print(f"Word: {restore_word} added again")
+        restored_word = memory.pop()
+        words.append(restored_word)
+        print(f"Word: '{restored_word}' added again")
     
     if user_input == 4:
         quit = True

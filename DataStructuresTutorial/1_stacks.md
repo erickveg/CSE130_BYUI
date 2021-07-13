@@ -45,13 +45,15 @@ ERROR  # You can't remove any item because the stack is empty
 As you can notice, because we add or removed a stack component only from one end of the structure the performance of those operation will always be O(1). 
 
 ## Example
-Have you ever been writing an important document and suddenly you press a key and everything desapears? You get desperate but remember that "Ctrl + Z" is there to undo your mistake. How does the computer know what to put back when you use the Undo property? In this example we will implement a simple text editor with the capacity to undo any deletion.
+Have you ever been writing an important document and suddenly you press a key and everything desapears? You get desperate but remember that "Ctrl + Z" is there to undo your mistake. How does the computer know what to put back when you use the Undo property? In this example we will implement a simple text editor with the capacity to undo any deletion. 
 
 ```python
+# Create a stack to store the text inserted by the user
 words = []
+# Create a stack to store the words deleted
 memory = []
-quit = False
 
+quit = False
 
 while quit == False:
     
@@ -61,7 +63,7 @@ while quit == False:
     (2) Delete last word
     (3) Undo deletion
     (4) Quit 
-    >>> """))
+    """))
 
     if user_input == 1:
         user_text = input("Insert text here: ")
@@ -69,7 +71,7 @@ while quit == False:
             words.append(word)
     
     if user_input == 2:
-        if len(words) > 0: # Make sure your stack is not empty
+        if len(words) > 0: # Make sure your words stack is not empty
             removed_word = words.pop()
             memory.append(removed_word)
             print(f"You have removed the word {removed_word}")
@@ -77,9 +79,14 @@ while quit == False:
             print("Sorry, you need to insert text first")
     
     if user_input == 3:
-        restore_word = words.append(memory.pop())
-        print(f"Word: {restore_word} added again")
+        if len(memory) > 0 # Make sure your memory stack is not empty
+            
+            restore_word = words.append(memory.pop())
+            print(f"Word: {restore_word} added again")
+        else:
+            print("No words in 'memory'")
     
+    # Exit the program if the user enters 4
     if user_input == 4:
         quit = True
 
@@ -89,7 +96,16 @@ while quit == False:
     ==================
     """)
 ```
-
+OUTPUT:
+```
+Choose an option:
+    (1) Insert text
+    (2) Delete last word
+    (3) Undo deletion
+    (4) Quit 
+    
+>>> 1
+```
 
 
 ## Problem to Solve
