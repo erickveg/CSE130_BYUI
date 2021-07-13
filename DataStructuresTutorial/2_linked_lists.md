@@ -17,7 +17,7 @@ O(n)
 ## Differences between a Linked List and a Dynamic Array
 * The way they store elements in memory
 ## Example
-
+* Example using collections.deque
 ## Problem to Solve
 * Implement your own linked list ...
 ```
