@@ -44,7 +44,7 @@ ERROR  # You can't remove any item because the stack is empty
 ## Performance
 As you can notice, because we add or removed a stack component only from one end of the structure the performance of those operation will always be O(1). 
 
-## Example
+## Example : Undo Property in a Simple Text Editor
 Have you ever been writing an important document and suddenly you press a key and everything desapears? You get desperate but remember that "Ctrl + Z" is there to undo your mistake. How does the computer know what to put back when you use the Undo property? In this example we will implement a simple text editor with the capacity to undo any deletion. 
 
 ```python
@@ -154,7 +154,44 @@ My
 ```
 
 
-## Problem to Solve
+## Problem to Solve : Pyramid Volume
+Now, you will have the oportunity to implement a program which will help you understand why stacks are useful handling functions in programming.
+
+You will implement a simple pyramid volume calculator which accept thee parameters: 
+
+* l : base length
+* w : base width
+* h : pyramid height 
+
+The formula to calculate the volume of a pyramid is the folowing:
+
+_V = (lwh) / 3_
+
+The _l_, _w_ and _h_ values will be given in centimeters and your program must be able to convert centimeters to inches for the final result. Your program should have at least three function, one to calculate the actual volume, one to calculate the pyramid base and another to convert _cm_ to _in_.
+
+### Test
+Try your solution with the following values. The input values are l, w, and h, in that order.
+
+```
+>>> calculate_pyramid_volume(3,5,10)
+
+The pyramid volume in inches is: 19.685
+```
+
+You can check your code with the
+
+### Analysis
+You are probably wondering what does this program have to be with stacks? Well, what you just did is a perfect example of how stacks are used to solve multiple function calls from the same program. How does the computers know what to solve first?
+
+Compilers basically use stacks to store all the function calls while running a program and always warranty to solve the last called before proceed with the previous call.
+
+In our case, the compiler call functions in the following order:
+
+1. `calculate_pyramid_volume()`
+2. `calculate_base_area()`
+3. `convert_cm_to_in()`
+
+But, here is the key feature of stacks. What would happen if we try to solve our program in that order? It would simply fail, because `calculate_pyramid_volume()` couldn't calculate the volume without knowing the pyramid base first. The stacks are very useful to solve nested functions, it helps the compiler to go backwards from the last recent function call to the very first call.
 
 
 [Back to Welcome Page](0_Welcome.md)
