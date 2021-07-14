@@ -10,7 +10,7 @@
 
 ## Introduction
 
-A stack is a linear data structure which means that each element exists next to each other in memory. The main feature of a stack is that new components can be added or removed only from one end also known as Last In First Out (LIFO) estructure, while other data structures like [Queues](https://dbader.org/blog/queues-in-python) remove items from one end and added to the oposite end. Stacks are used to implement functions and are used in a variety of ways in computer science because is useful to process nested functions.
+A stack is a linear data structure which means that each element exists next to each other in memory (contiguous memory). The main feature of a stack is that new components can be added or removed only from one end also known as Last In First Out (LIFO) estructure, while other data structures like [Queues](https://dbader.org/blog/queues-in-python) remove items from one end and added to the oposite end. Stacks are used to implement functions and are used in a variety of ways in computer science because is useful to process nested functions.
 
 ## Stacks in Python
 
@@ -178,7 +178,7 @@ Try your solution with the following values. The input values are l, w, and h, i
 The pyramid volume in inches is: 19.685
 ```
 
-You can check your code with the
+You can check your code with the solution here: [Pyramid Volume Solution]()
 
 ### Analysis
 You are probably wondering what does this program have to be with stacks? Well, what you just did is a perfect example of how stacks are used to solve multiple function calls from the same program. How does the computers know what to solve first?

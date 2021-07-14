@@ -1,23 +1,37 @@
 # Linked Lists
 
+## Table of Contents
+
+* [Introduction](#introduction)
+* [Structure](#structure)
+* [Linked Lists in Python](#linked-lists-in-python)
+* [Performance](#performance)
+* [Linked List vs Dynamic Array](#differences-between-a-linked-list-and-a-dynamic-array)
+* [Example](#example)
+* [Problem to Solve](#problem-to-solve)
+
 ## Introduction
-* Collection of data stored in a random way in memory
-* Each element is called Node
-* Each node contains a value and links to the previous and next node. Links are pointers to the location in memory of the other nodes.
-* First node is called the head
-* Last node is called the tail
-* Applications: ...
+A linked list is a collection of data stored in a random way in memory which means elements of the structure are not next to the other (for more information scroll down clic here: [Linked List vs Dynamic Array](#differences-between-a-linked-list-and-a-dynamic-array)). Therefore, the structure needs a way to track the position of each element to keep the structure together, here we introduce the term of a __Node__. The node will contain both the value and a link to the previous and next node, this is Bi-directional linking.
 
 ## Structure
+
+In a link list we called the first node __the head__ and the last one __the tail__. If you know where __the head__ is, you will be able to traverse the entire list and access to all the nodes of the structure.   
+
 ![realpython.com](Group_21.webp)
+
 ## Linked Lists in Python
 * Using collections.deque
+
 ## Performance
 O(n)
-## Differences between a Linked List and a Dynamic Array
-* The way they store elements in memory
+
+## Linked List vs Dynamic Array
+
+The main difference between a linked list and a dynamic array is how the memory is managed, therefore, the same operations might have different perfomance on each one.
+
 ## Example
 * Example using collections.deque
+
 ## Problem to Solve
 * Implement your own linked list ...
 ```
