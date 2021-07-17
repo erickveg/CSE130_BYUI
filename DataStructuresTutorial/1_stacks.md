@@ -178,7 +178,7 @@ Try your solution with the following values. The input values are l, w, and h, i
 The pyramid volume in inches is: 19.685
 ```
 
-You can check your code with the solution here: [Pyramid Volume Solution]()
+You can check your code with the solution here: [Pyramid Volume Solution](pyramid_volume_solution.py)
 
 ### Analysis
 You are probably wondering what does this program have to be with stacks? Well, what you just did is a perfect example of how stacks are used to solve multiple function calls from the same program. How does the computers know what to solve first?
@@ -191,7 +191,11 @@ In our case, the compiler call functions in the following order:
 2. `calculate_base_area()`
 3. `convert_cm_to_in()`
 
-But, here is the key feature of stacks. What would happen if we try to solve our program in that order? It would simply fail, because `calculate_pyramid_volume()` couldn't calculate the volume without knowing the pyramid base first. The stacks are very useful to solve nested functions, it helps the compiler to go backwards from the last recent function call to the very first call.
+But, here is the key feature of stacks. What would happen if we try to solve our program in that order? It would simply fail, because `calculate_pyramid_volume()` couldn't calculate the volume without knowing the pyramid base first. The stacks are very useful to solve nested functions, it helps the compiler to go backwards from the last recent function call to the very first call. Our program was solved in the following order:
+
+1. `calculate_base_area()`
+2. `convert_cm_to_in()`
+3. `calculate_pyramid_volume()`
 
 
 [Back to Welcome Page](0_Welcome.md)
