@@ -6,8 +6,8 @@
 * [Structure](#structure)
 * [Linked Lists in Python](#linked-lists-in-python)
 * [Linked List vs Dynamic Array](#linked-list-vs-dynamic-array)
-* [Example](#example)
-* [Problem to Solve](#problem-to-solve)
+* [Example](#example-reverse-using-deque)
+* [Problem to Solve](#problem-to-solve-reverse-function)
 
 ## Introduction
 A linked list is a collection of data whose elements are stored in a random way in memory which means that elements are not next to the other like Dynamic Arrays or Lists (for more information scroll or down clic here: [Linked List vs Dynamic Array](#differences-between-a-linked-list-and-a-dynamic-array)). Therefore, the structure needs a way to track the position of each element to keep the structure together, here we introduce the term of a __Node__. A linked list is a collection of nodes. The node will contain both the value and a link to the next node.
@@ -88,7 +88,7 @@ The main difference between a linked list and a dynamic array is the memory mana
 |Remove Middle|O(n)|O(n)
 |Remove End|O(1)|O(1)|
 
-## Example
+## Example: Reverse Using Deque
 In this example we will see how simple is to reverse a linked list using `collections.deque()`.
 
 ```python
@@ -105,7 +105,7 @@ deque(['2','3','5','7','11','13'])
 deque(['13','11','7','5','3','2'])
 ```
 
-## Problem to Solve
+## Problem to Solve: Reverse Function
 Now you will have the oportunity to implement a Linked List using classes and functions in Python. You will be provided a template. Take time to carefully read the comments and undertand the program before start.
 
 Your challenge is to implement the `reverse()` function in such a way that your program could return the content of a Linked List but in a reverse order.

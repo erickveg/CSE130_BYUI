@@ -5,8 +5,8 @@
 * [Introduction](#introduction)
 * [Stacks in Python](#stacks-in-python)
 * [Performance](#performance)
-* [Example](#example)
-* [Problem to Solve](#problem-to-solve)
+* [Example](#example-undo-property-in-a-simple-text-editor)
+* [Problem to Solve](#problem-to-solve-pyramid-volume)
 
 ## Introduction
 
@@ -44,7 +44,7 @@ ERROR  # You can't remove any item because the stack is empty
 ## Performance
 As you can notice, because we add or removed a stack component only from one end of the structure the performance of those operation will always be O(1). 
 
-## Example : Undo Property in a Simple Text Editor
+## Example: Undo Property in a Simple Text Editor
 Have you ever been writing an important document and suddenly you press a key and everything desapears? You get desperate but remember that "Ctrl + Z" is there to undo your mistake. How does the computer know what to put back when you use the Undo property? In this example we will implement a simple text editor with the capacity to undo any deletion. 
 
 ```python
@@ -154,7 +154,7 @@ My
 ```
 
 
-## Problem to Solve : Pyramid Volume
+## Problem to Solve: Pyramid Volume
 Now, you will have the oportunity to implement a program which will help you understand why stacks are useful handling functions in programming.
 
 You will implement a simple pyramid volume calculator which accept thee parameters: 
