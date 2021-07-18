@@ -19,7 +19,9 @@ _Picture From: https://realpython.com/linked-lists-python/_
 
 In a link list we called the first node __the head__ and the last one __the tail__. If you know where __the head__ is, you will be able to traverse the entire list and access to all the nodes of the structure. __The tail's__ next value is always set as `None` to determine the end of the structure. 
 
-<img src="Group_14.webp" alt="node" height = 100/>
+<img src="Group_14.webp" alt="node" height = 100 />
+
+
 
 _Picture From: https://realpython.com/linked-lists-python/_
 

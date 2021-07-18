@@ -37,18 +37,114 @@ But notice that our three is balanced, in other words each side has almost the s
 
 10, 36, 45, 50, 69, 73, 81
 
-It would result in a tree like this.
+It would result in a tree like this:
 
 ![Unbalanced Binary Search Tree](unbalanced_binary_search_tree.jpg)
 
-
 ## Balanced Binary Search Trees
 
+A Balanced Binary Search Tree is a BST which ensures that all the subtrees heights are almost the same. There are a variety of algorithms used to ensure this property in a BST.  
 
+In the next example, you can see how a balanced binary search tree is created from an array taking the middle value of the array and setting it as the root and then continue doing the same with each remaining section.
 
+![optimal binary search tree from sorted array](optimal-binary-search-tree-from-sorted-array.gif)
 
 ## Recursion
 
+Recursion is a technique used in programming to call a function inside the same function. It is used for procesess that require to follow the same logic but with different inputs provided each time the function is called.
+
+Recursion and trees are good friends. Since inserting and traversing a tree is a repetitive process of comparing and taking different paths, recursion is the best technique to accomplish this purpose. 
+
+Let's analyze the following block of code:
+
+```python
+def  print_n_numbers(n):
+    print(n)
+    print_n_numbers(n)
+```
+
+The purpose of the function above is to print all the number from n to 0. We used recursion in the third line to call again the function `print_n_numbers()` and passed 'n-1' as the argument to decrease n by 1 every time the function call. Nevertheless we are missing some things that are important when using recursion. If we run this program, the result would look like this:
+
+```
+>>> print_n_numbers(10)
+10
+9
+8
+7
+6
+... 
+-983
+-984
+-985
+
+RecursionError: maximum recursion depth exceeded while calling a Python object
+```
+
+### Recursion Rules
+
+When using recursion, if there isn't a stop sign, the program could run forever, well actually, as shown in the error above, Python will stop the recursive call when it reaches a maximum number of calls.
+
+These rules will help us to implement recursion succesfully in our programs.
+
+1. __Base Case__ - This is the stop sign for recursion. The base case is the condition that will stop recursion.
+
+2. __Smaller Problem__ - We need to define a way for recursion to reach it's base case, or in other words, each time a function is called we need to alter its input in some way with a smaller problem.
+
+Using `print_n_numbers()` let's implement a base case and a smaller problem.
+
+ ```python
+ def  print_n_numbers(n):
+    if n < 0: # base case
+        return
+    else:
+        print(n)
+        print_n_numbers(n-1) # smaller problem
+ ```
+
+Notice that adding a simple if/else statement could be enought to stablish a base case where recursion will stop, in this case, if n is less than 0. And we already have stablished a smaller problem, each the function is called n is reduced by 1 to reach the base case.
+
+We will use recursion in the next examples to implement some functions that will help us undertand how trees work in a deeper way.
+
 ## Trees in Python
-## Example
-## Problem to Solve
+There is a way to implement trees in Python using third party libraries, but in this guide we will implement trees using classes and function for education purposes.
+
+To implement a simple Binary Search Tree in Python we need to create a Node class first.
+
+```python
+class Node:
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+```
+
+Once we have our Node class, we can initizalize a simple binary tree.
+
+```
+>>> root = Node(15)
+# Tree Structure
+#       10
+#      /  \
+#   None  None
+
+>>> root.left = Node(7)
+>>> root.right = Node(70)
+# Tree Structure
+#          10
+#       /     \
+#      7       70
+#    /  \     /  \
+# None None None None
+```
+We will see how to implement a Binary Search Tree and a Balanced Binary Search Tree in the Example later in this tutorial. But meanwhile, let's see the basic operations in a BST:
+
+Table
+
+
+
+
+
+## Example: INSERT UNIQUE VALUES ONLY
+
+## Problem to Solve: CREATE TREE FROM SORTED LIST
+
