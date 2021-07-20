@@ -112,8 +112,13 @@ Now you will have the oportunity to implement a Linked List using classes and fu
 
 Your challenge is to implement the `reverse()` function in such a way that your program could return the content of a Linked List but in a reverse order.
 
-Start here: [Linked List Template]()
+Start here: [Linked List Template](linked_list_template.py)
 
-You can check your code with the solution here: [Reverse Function Solution](pyramid_volume_solution.py)
+> This template has been take and adapted from "07-prove_linked_list.py" CSE212 (c) BYU-Idaho - It is a violation of BYU-Idaho Honor Code to post or share this code with others or 
+to post it online.  Storage into a personal and private repository (e.g. private
+GitHub repository, unshared Google Drive folder) is acceptable.
+
+You can check your code with the solution here: [Reverse Function Solution](linked_list_template_solution.py)
+> The solution provided for the problem has been written by the author of this guide.
 
 [Back to Welcome Page](0_Welcome.md)

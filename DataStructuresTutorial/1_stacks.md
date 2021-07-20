@@ -10,7 +10,7 @@
 
 ## Introduction
 
-A stack is a linear data structure which means that each element exists next to each other in memory (contiguous memory). The main feature of a stack is that new components can be added or removed only from one end also known as Last In First Out (LIFO) estructure, while other data structures like [Queues](https://dbader.org/blog/queues-in-python) remove items from one end and added to the oposite end. Stacks are used to implement functions and are used in a variety of ways in computer science because is useful to process nested functions.
+A stack is a linear data structure which means that each element exists next to the other in memory (contiguous memory). The main feature of a stack is that new components can be added or removed only from one end also known as Last In First Out (LIFO) structure, while other data structures like [Queues](https://dbader.org/blog/queues-in-python) remove items from one end and added to the opposite end. Stacks are used to implementing functions and are used in a variety of ways in computer science because are useful to process nested functions.
 
 ## Stacks in Python
 
@@ -42,10 +42,10 @@ stack.append('mangos')
 ERROR  # You can't remove any item because the stack is empty
 ```
 ## Performance
-As you can notice, because we add or removed a stack component only from one end of the structure the performance of those operation will always be O(1). 
+As you can notice because we add or remove a stack component only from one end of the structure the performance of those operations will always be O(1). 
 
 ## Example: Undo Property in a Simple Text Editor
-Have you ever been writing an important document and suddenly you press a key and everything desapears? You get desperate but remember that "Ctrl + Z" is there to undo your mistake. How does the computer know what to put back when you use the Undo property? In this example we will implement a simple text editor with the capacity to undo any deletion. 
+Have you ever been writing an important document and suddenly you press a key and everything disappears? You get desperate but remember that "Ctrl + Z" is there to undo your mistake. How does the computer know what to put back when you use the Undo property? In this example, we will implement a simple text editor with the capacity to undo any deletion. 
 
 ```python
 # Create a stack to store the text inserted by the user
@@ -155,19 +155,19 @@ My
 
 
 ## Problem to Solve: Pyramid Volume
-Now, you will have the oportunity to implement a program which will help you understand why stacks are useful handling functions in programming.
+Now, you will have the opportunity to implement a program that will help you understand why stacks are useful handling functions in programming.
 
-You will implement a simple pyramid volume calculator which accept thee parameters: 
+You will implement a simple pyramid volume calculator which accepts thee parameters: 
 
 * l : base length
 * w : base width
 * h : pyramid height 
 
-The formula to calculate the volume of a pyramid is the folowing:
+The formula to calculate the volume of a pyramid is the following:
 
 _V = (lwh) / 3_
 
-The _l_, _w_ and _h_ values will be given in centimeters and your program must be able to convert centimeters to inches for the final result. Your program should have at least three function, one to calculate the actual volume, one to calculate the pyramid base and another to convert _cm_ to _in_.
+The _l_, _w_ and _h_ values will be given in centimeters and your program must be able to convert centimeters to inches for the final result. Your program should have at least three functions, one to calculate the actual volume, one to calculate the pyramid base, and another to convert _cm_ to _in_.
 
 ### Test
 Try your solution with the following values. The input values are l, w, and h, in that order.
@@ -181,9 +181,9 @@ The pyramid volume in inches is: 19.685
 You can check your code with the solution here: [Pyramid Volume Solution](pyramid_volume_solution.py)
 
 ### Analysis
-You are probably wondering what does this program have to be with stacks? Well, what you just did is a perfect example of how stacks are used to solve multiple function calls from the same program. How does the computers know what to solve first?
+You are probably wondering what does this program has to be with stacks? Well, what you just did is a perfect example of how stacks are used to solve multiple function calls from the same program. How do computers know what to solve first?
 
-Compilers basically use stacks to store all the function calls while running a program and always warranty to solve the last called before proceed with the previous call.
+Compilers basically use stacks to store all the function calls while running a program and always warranty to solve the last call before proceed with the previous call.
 
 In our case, the compiler call functions in the following order:
 
@@ -191,7 +191,7 @@ In our case, the compiler call functions in the following order:
 2. `calculate_base_area()`
 3. `convert_cm_to_in()`
 
-But, here is the key feature of stacks. What would happen if we try to solve our program in that order? It would simply fail, because `calculate_pyramid_volume()` couldn't calculate the volume without knowing the pyramid base first. The stacks are very useful to solve nested functions, it helps the compiler to go backwards from the last recent function call to the very first call. Our program was solved in the following order:
+But, here is the key feature of stacks. What would happen if we try to solve our program in that order? It would simply fail, because `calculate_pyramid_volume()` couldn't calculate the volume without knowing the pyramid base first. The stacks are very useful to solve nested functions, it helps the compiler to go backward from the last recent function call to the very first call. Our program was solved in the following order:
 
 1. `calculate_base_area()`
 2. `convert_cm_to_in()`

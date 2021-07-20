@@ -6,34 +6,36 @@
 * [Balanced Binary Seach Trees](#balanced-binary-search-trees)
 * [Recursion](#recursion)
 * [Trees in Python](#trees-in-python)
-* [Example](#example)
-* [Problem to Solve](#problem-to-solve)
+* [Example](#example-insert-unique-values-function)
+* [Problem to Solve](#problem-to-solve-create-tree-from-sorted-list)
 
-parent, child, subtrees, height
 
 ## Introduction
-A tree is a nonlinear data structure that unlike arrays, lists, linked lists, stacks or queues which are linear structures, can have multiple other nodes connected to the same node. The first node is always called the __root__, and all the nodes without a connection are called __leaves__. There is not circular connections or unconnected nodes.
+A tree is a nonlinear data structure that unlike arrays, lists, linked lists, stacks or queues which are linear structures, can have multiple other nodes connected to the same node. The first node is always called the __root__, and all the nodes without a connection are called __leaves__. There is not circular connections or unconnected nodes. Every node that has other nodes under it is called __parent__ and each dependant is a __child__.
 
 In this guide we will review the following types of trees: Binary Trees, Binary Search Tress and Balanced Binary Search Trees.
 
 ## Binary Trees
-A Binary Tree is a type of tree that only allows at most two nodes connected to a single node. Those two nodes are often called __left child__ and __right child__. This type of trees are often used to implement binary search trees, and for efficient sorting or searching algorithms.
+A Binary Tree is a type of tree that only allows at most two nodes connected to a single node. Those are often called __left child__ and __right child__. This type of trees are often used to implement binary search trees, and for efficient sorting or searching algorithms.
  
 ## Binary Search Trees
-A binary search tree __(BST)__ is also known as an ordered or sorted binary tree because where new values are stored depends on whether they are larger or smaller than their parent node. The smallest values will be placed in the left child and the highest value will be placed in the right child. Having an structure like this is extremely efficient when it comes to sort a large collection of items. For example, let's insert the number 10 in the following tree.
+A binary search tree __(BST)__ is also known as an ordered or sorted binary tree because the place where new values are stored depends on whether they are larger or smaller than their parent node. The smallest values will be placed in the left child and the highest value will be placed in the right child. Having an structure like this is extremely efficient when it comes to sort a large collection of items. For example, let's insert the number 10 in the following tree.
 
 ![Binary Search Tree](Binary_search_tree.jpg)
 
 To do it, we must follow the following steps:
 1. Compare 10 and 50. Since 10 is less than 50 we keep looking at the left side of 50.
-2. Compare 10 and 36. Since 10 is less than 36 we keep looking at the right side of 36.
+2. Compare 10 and 36. Since 10 is less than 36 we keep looking at the left side of 36.
 3. Since there is an empty spot we can insert 10 at the left side of 36.
 
 ![Binary Search Tree Insert](Binary_search_tree_insert.jpg)
 
 As you can see, a BST is extremely efficient because inserting and find a specific value in a BST is done by excluding [recursively](#recursion) a subtree, thus instead of performing a linear seach O(n) we reach an efficient of O(log n).
 
-But notice that our three is balanced, in other words each side has almost the same height. If we would have the same values but inserted in this order: 
+But notice that our three is balanced, in other words each side has almost the same __height__. 
+>__The Height__ in a tree is defined by the maximum number of sub-levels existing in a tree.
+
+If we would have the same values but inserted in this order: 
 
 10, 36, 45, 50, 69, 73, 81
 
@@ -53,7 +55,7 @@ In the next example, you can see how a balanced binary search tree is created fr
 
 Recursion is a technique used in programming to call a function inside the same function. It is used for procesess that require to follow the same logic but with different inputs provided each time the function is called.
 
-Recursion and trees are good friends. Since inserting and traversing a tree is a repetitive process of comparing and taking different paths, recursion is the best technique to accomplish this purpose. 
+Recursion and trees are good friends. Since inserting and traversing a tree is a repetitive process of comparing and taking different paths, recursion is the best technique to accomplish this extenuating task. 
 
 Let's analyze the following block of code:
 
@@ -101,12 +103,12 @@ Using `print_n_numbers()` let's implement a base case and a smaller problem.
         print_n_numbers(n-1) # smaller problem
  ```
 
-Notice that adding a simple if/else statement could be enought to stablish a base case where recursion will stop, in this case, if n is less than 0. And we already have stablished a smaller problem, each the function is called n is reduced by 1 to reach the base case.
+Notice that adding a simple if/else statement could be enought to stablish a base case for recursion to stop, in this case, if n is less than 0. We already have stablished a smaller problem because each time the function is called, n is reduced by 1 to reach the base case.
 
-We will use recursion in the next examples to implement some functions that will help us undertand how trees work in a deeper way.
+We will use recursion in the next examples to implement some functions that will help us understand how trees work in a deeper way.
 
 ## Trees in Python
-There is a way to implement trees in Python using third party libraries, but in this guide we will implement trees using classes and function for education purposes.
+There is a way to implement trees in Python using third-party libraries, but in this guide, we will implement trees using classes and functions for education purposes.
 
 To implement a simple Binary Search Tree in Python we need to create a Node class first.
 
@@ -137,8 +139,6 @@ Once we have our Node class, we can initizalize a simple binary tree.
 # None None None None
 ```
 We will see how to implement a Binary Search Tree and a Balanced Binary Search Tree in the Example later in this tutorial. But meanwhile, let's see the basic operations in a BST:
-
-Table https://byui-cse.github.io/cse212-course/lesson09/09-prepare.html
 
 |Operation|Description|Performance|
 |---------|-----------|-----------|
@@ -210,9 +210,11 @@ In this problem you will use what we have done above to create a function that i
 You will be provided a template. Please, read carefully all the comments and documentation before to start.
 
 Start here: [BST Template](bst_template.py)
-> This template has been take and adapted from "09-prove-trees.py" CSE212 (c) BYU-Idaho - It is a violation of BYU-Idaho Honor Code to post or share this code with others or 
+> This template has been take and adapted from "09-prove_trees.py" CSE212 (c) BYU-Idaho - It is a violation of BYU-Idaho Honor Code to post or share this code with others or 
 to post it online.  Storage into a personal and private repository (e.g. private
 GitHub repository, unshared Google Drive folder) is acceptable.
 
 You can check your code with the solution here: [BST Solution](bst_template_solution.py)
 > The solution provided for the problem has been written by the author of this guide.
+
+[Back to Welcome Page](0_Welcome.md)

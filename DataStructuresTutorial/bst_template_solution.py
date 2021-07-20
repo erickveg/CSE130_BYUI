@@ -1,15 +1,44 @@
+"""
+CSE212 
+(c) BYU-Idaho
+09-Prove - Problems
+
+It is a violation of BYU-Idaho Honor Code to post or share this code with others or 
+to post it online.  Storage into a personal and private repository (e.g. private
+GitHub repository, unshared Google Drive folder) is acceptable.
+"""
+
+from numpy.core.fromnumeric import sort
+
+
 class BST:
+    """
+    Implement the Binary Search Tree (BST) data structure.  The Node 
+    class below is an inner class.  An inner class means that its real 
+    name is related to the outer class.  To create a Node object, we will 
+    need to specify BST.Node
+    """
 
     class Node:
+        """
+        Each node of the BST will have data and links to the 
+        left and right sub-tree. 
+        """
 
         def __init__(self, data):
-            """Initialize a new node. Initially the links are set to None"""
+            """ 
+            Initialize the node to the data provided.  Initially
+            the links are unknown so they are set to None.
+            """
+       
             self.data = data
-            self.right = None
             self.left = None
+            self.right = None
 
     def __init__(self):
-        """Initialize an empty BST"""
+        """
+        Initialize an empty BST.
+        """
         self.root = None
 
     def insert(self, data):
