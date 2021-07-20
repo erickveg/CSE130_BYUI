@@ -187,7 +187,7 @@ Now that we have our base, let's implement our `insert()` function.
 
         elif data > node.data:
             # We find and empty spot to insert a new node 
-            if node.right = None:
+            if node.right == None:
                 node.right = BST.Node(data)
             # Otherwise, call _insert again
             else:
@@ -195,7 +195,7 @@ Now that we have our base, let's implement our `insert()` function.
         
         else:
             # We find and empty spot to insert a new node
-            if node.left = None
+            if node.left == None:
                 node.left = BST.Node(data)
             # Otherwise, call _insert again
             else: 
@@ -203,11 +203,16 @@ Now that we have our base, let's implement our `insert()` function.
 
 ```
 
-
 ## Problem to Solve: Create Tree From Sorted List
 
-In this problem you will use what we have done above to create a function that is able to find the middle value from a sorted list and insert it in the BST. The same process will be repeated until all the elements in the sorted list are inserted in the BST.
+In this problem you will use what we have done above to create a function that is able to find the middle value from a sorted list and insert it in the BST. The same process wigit ll be repeated until all the elements in the sorted list are inserted in the BST.
 
 You will be provided a template. Please, read carefully all the comments and documentation before to start.
 
-Start here: [BST Template]()
+Start here: [BST Template](bst_template.py)
+> This template has been take and adapted from "09-prove-trees.py" CSE212 (c) BYU-Idaho - It is a violation of BYU-Idaho Honor Code to post or share this code with others or 
+to post it online.  Storage into a personal and private repository (e.g. private
+GitHub repository, unshared Google Drive folder) is acceptable.
+
+You can check your code with the solution here: [BST Solution](bst_template_solution.py)
+> The solution provided for the problem has been written by the author of this guide.

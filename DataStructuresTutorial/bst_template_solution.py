@@ -75,7 +75,7 @@ class BST:
         max_height = max(left_max,right_max) + 1
 
         return max_height
-        
+
     def __iter__(self):
         """
         Perform a forward traversal (in order traversal) starting from 
@@ -134,6 +134,10 @@ def create_bst_from_sorted_list(sorted_list):
     _insert_middle(sorted_list, 0, len(sorted_list)-1, bst)
     return bst
 
+# =================================
+# PROBLEM TO SOLVE: _insert_middle
+# =================================
+
 def _insert_middle(sorted_list, first, last, bst):
     """
     This function will attempt to insert the item in the middle
@@ -170,6 +174,9 @@ def _insert_middle(sorted_list, first, last, bst):
     bst.insert(sorted_list[middle])        
     _insert_middle(sorted_list,first,middle-1,bst) # Insert numbers of the left half of "middle"
     _insert_middle(sorted_list,middle+1,last,bst) # Insert numbers from the right half of "middle"
+
+
+# This will help you test your solution. DO NOT TOUCH
 
 tree1 = create_bst_from_sorted_list([10, 20, 30, 40, 50, 60])
 tree2 = create_bst_from_sorted_list([x for x in range(127)]) # 2^7 - 1 nodes
