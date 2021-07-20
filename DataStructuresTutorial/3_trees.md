@@ -138,13 +138,76 @@ Once we have our Node class, we can initizalize a simple binary tree.
 ```
 We will see how to implement a Binary Search Tree and a Balanced Binary Search Tree in the Example later in this tutorial. But meanwhile, let's see the basic operations in a BST:
 
-Table
+Table https://byui-cse.github.io/cse212-course/lesson09/09-prepare.html
+
+|Operation|Description|Performance|
+|---------|-----------|-----------|
+|insert(value)|Insert a value into the tree|O(log n)|
+|remove(value)|Remove a value from the tree|O(log n)|
+|height(node)|Get the height of a node in the tree|O(log n)|
+|contains(value)|Check if certain value is in the tree|O(log n)|
+|traverse()|Pass through all the nodes in a tree in certain order|O(log n)|
+
+## Example: Insert Unique Values Function
+
+In this example we will implement a Binary Search Tree and a function to insert a value in the tree. Remember that to insert a value in a BST (except for the root) we place the smallest values at the left and the biggest at the right. We need to make sure that only unique values can be inserted into the tree.
+
+Let's implement a class to initialize a BST and an inner class for Nodes.
+
+```python
+class BST:
+
+    class Node:
+
+        def __init__(self, data):
+            """Initialize a new node. Initially the links are set to None"""
+            self.data = data
+            self.right = None
+            self.left = None
+
+    def __init__(self):
+        """Initialize an empty BST"""
+        self.root = None        
+```
+
+Now that we have our base, let's implement our `insert()` function.
+```python
+
+    def insert(self, data):
+        """"Insert a new node into the BST. If the BST is empty (the root is None), then set the new node as the root. Otherwise call _insert to find a spot to insert"""
+        if self.root == None:
+            self.root = BST.Node(data)
+        else:
+            self._insert(data, self.root) # Start at the root
+
+    def _insert(self,data, node):
+        """When this function is called we first check if the data to be inserted is unique. If it is unique, we compare the data to be inserted with the data of the current node, if the data to be inserted us greater we set a new node at the right node otherwise we use recursion to check again a new location. The same process with a data smaller than the current node data. """
+        if data == node.data:
+            pass
+
+        elif data > node.data:
+            # We find and empty spot to insert a new node 
+            if node.right = None:
+                node.right = BST.Node(data)
+            # Otherwise, call _insert again
+            else:
+                self._insert(data, node.right)
+        
+        else:
+            # We find and empty spot to insert a new node
+            if node.left = None
+                node.left = BST.Node(data)
+            # Otherwise, call _insert again
+            else: 
+                self._insert(data, node.left)    
+
+```
 
 
+## Problem to Solve: Create Tree From Sorted List
 
+In this problem you will use what we have done above to create a function that is able to find the middle value from a sorted list and insert it in the BST. The same process will be repeated until all the elements in the sorted list are inserted in the BST.
 
+You will be provided a template. Please, read carefully all the comments and documentation before to start.
 
-## Example: INSERT UNIQUE VALUES ONLY
-
-## Problem to Solve: CREATE TREE FROM SORTED LIST
-
+Start here: [BST Template]()

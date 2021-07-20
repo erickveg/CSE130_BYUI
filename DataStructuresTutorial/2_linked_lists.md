@@ -91,7 +91,7 @@ The main difference between a linked list and a dynamic array is the memory mana
 |Remove End|O(1)|O(1)|
 
 ## Example: Reverse Using Deque
-In this example we will see how simple is to reverse a linked list using `collections.deque()`.
+In this example we will see how simple it is to reverse a linked list using `collections.deque()`.
 
 ```python
 >>> my_example = deque()
